@@ -1,3 +1,4 @@
 import { combineReducers } from 'redux';
 import tracker from './tracker/reducer';
-export default combineReducers({ tracker: tracker });
+import user from './user/reducer';
+export default combineReducers({ tracker: tracker, user: user });

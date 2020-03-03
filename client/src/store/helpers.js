@@ -4,7 +4,7 @@ export const createSetter = (name, props) =>
 		const setter = payload => {
 			return {
 				type,
-				payload: { [prop]: payload }
+				payload: { [prop]: payload || {} }
 			};
 		};
 		setter.toString = () => type;
@@ -23,9 +23,9 @@ export const createReducer = (defaultState, handlers) => (
 export const createSelectors = (name, props) =>
 	props.map(prop => state => state[name][prop]);
 
-export const createHandlers = ({ typeKeyMap, NAME, initialState }) =>
+export const createHandlers = ({ typeKeyMap, Name, initialState }) =>
 	typeKeyMap.reduce((accumlator, nextValue) => {
-		accumlator[`${NAME}/${nextValue.type}`] = (
+		accumlator[`${Name}/${nextValue.type}`] = (
 			state = initialState,
 			payload
 		) => {

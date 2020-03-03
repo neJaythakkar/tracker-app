@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { createStore,compose } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import RootReducer from './store';
 import './index.css';
@@ -9,7 +10,7 @@ import App from './containers/app';
 import * as serviceWorker from './serviceWorker';
 
 const componseEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(RootReducer,componseEnhancer());
+const store = createStore(RootReducer, componseEnhancer(applyMiddleware(thunk)));
 
 ReactDOM.render(
 	<Provider store={store}>

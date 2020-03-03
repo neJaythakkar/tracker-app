@@ -17,6 +17,14 @@ router.get("/", (request, response, next) => {
     );
 });
 
+router.get("/user",(request,response,next) => {
+	const date = new Date();
+	const user = {
+		id : `user_${date.getTime()}`
+	}
+	response.status(200).send(user);
+});
+
 router.use('/events',events);
 
 exports.router = router;
