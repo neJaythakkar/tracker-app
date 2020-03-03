@@ -1,0 +1,2 @@
+export const ADDEVENTS = 'ADDEVENTS';
+export const DELETEEVENTS = 'DELETEEVENTS';
