@@ -1,0 +1,3 @@
+.page-container.open-full{
+	height:  calc(100% - 30px) !important;
+}

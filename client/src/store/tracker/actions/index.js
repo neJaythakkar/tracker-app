@@ -11,10 +11,9 @@ export const addEvents = payload => ({
 	payload
 });
 
-export const postEvents = payload => async (dispatch, getState) => {
+export const postEvents = payload => (dispatch, getState) => {
 	const {tracker:{events}} = getState()
-	const response = await axios.post(`${apiUrl}events`,events);
-	dispatch(resetEvents({}));
+	return axios.post(`${apiUrl}events`,events);
 };
 
 

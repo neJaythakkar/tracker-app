@@ -1,0 +1,17 @@
+.control {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	cursor: pointer;
+}
+.collapsed{
+	height:40px;
+}
+.itemWrapper{
+	width:95%;
+}
+.collapsed .itemWrapper{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

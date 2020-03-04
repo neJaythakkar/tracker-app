@@ -1,14 +1,17 @@
 import React from 'react';
 import Routes from './Routes';
 import Tracker from '../tracker';
+import { connect } from 'react-redux';
+import * as uiSelectors from '../../store/ui/selectors';
 import './App.css';
 
-function App() {
+function App(props) {
+	
 	return (
 		<div className='App h-100'>
 			<header className='App-header'></header>
-			<div className='body-container container-fluid row h-100'>
-				<div class="col-6">
+			<div className='body-container container-fluid row h-100 m-0 p-0'>
+				<div class={`page-container h-75 overflow-auto ${props.isConsoleCollapsed? 'open-full' : ''}`}>
 					<Routes />
 				</div>
 				<Tracker />
@@ -17,4 +20,6 @@ function App() {
 	);
 }
 
-export default App;
+export default connect(state => ({
+	isConsoleCollapsed : uiSelectors.isCollapsed(state)
+}))(App);

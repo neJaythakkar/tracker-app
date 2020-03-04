@@ -4,7 +4,7 @@ export const createSetter = (name, props) =>
 		const setter = payload => {
 			return {
 				type,
-				payload: { [prop]: payload || {} }
+				payload: { [prop]: payload }
 			};
 		};
 		setter.toString = () => type;
