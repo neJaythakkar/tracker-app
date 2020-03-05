@@ -28,3 +28,28 @@ export const oilTypes = [
 	'Olive Oil',
 	'Coconut Oil'
 ];
+export const Vegetables = [
+	'Tomatoes',
+	'Potatoes',
+	'Sweet Potatoes',
+	'Onions',
+	'Garlic',
+	'Ginger',
+	'Spinach',
+	'Mint',
+	'Fenugreek',
+	'Cabbage',
+	'Carrots',
+	'Beetroot',
+	'Okra',
+	'Coliflower',
+	'Lemon',
+	'Kale',
+	'Brocolli',
+	'Raddish',
+	'Bitter Gourd',
+	'Sponge Gourd',
+	'Bottle Gourd',
+	'Cucumber',
+	'Coriander'
+];

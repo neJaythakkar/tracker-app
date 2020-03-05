@@ -1,1 +1,122 @@
-[{"userId":"user_1583331750259","time":1583332169565,"date":"4-2-2020","hours":"19:59","event":"click","controlType":"submit","position":{"x":68,"y":114,"width":377.5,"height":30,"top":114,"right":445.5,"bottom":144,"left":68},"page":"/number","text":8758591240},{"userId":"user_1583332167138","time":1583332170349,"date":"4-2-2020","hours":"19:59","event":"click","controlType":"submit","position":{"x":68,"y":152,"width":377.5,"height":30,"top":152,"right":445.5,"bottom":182,"left":68},"page":"/number","text":8758591242},{"userId":"user_1583332167138","time":1583332170965,"date":"4-2-2020","hours":"19:59","event":"click","controlType":"submit","position":{"x":68,"y":190,"width":377.5,"height":30,"top":190,"right":445.5,"bottom":220,"left":68},"page":"/number","text":8758591244},{"userId":"user_1583332167138","time":1583332173077,"date":"4-2-2020","hours":"19:59","event":"click","controlType":"submit","position":{"x":68,"y":228,"width":377.5,"height":30,"top":228,"right":445.5,"bottom":258,"left":68},"page":"/number","text":8758591246},{"userId":"user_1583332167138","time":1583332174181,"date":"4-2-2020","hours":"19:59","event":"click","controlType":"submit","position":{"x":68,"y":266,"width":377.5,"height":30,"top":266,"right":445.5,"bottom":296,"left":68},"page":"/number","text":8758591248},{"userId":"user_1583332167138","time":1583332176925,"date":"4-2-2020","hours":"19:59","event":"click","controlType":"submit","position":{"x":24,"y":407,"width":59.109375,"height":38,"top":407,"right":83.109375,"bottom":445,"left":24},"page":"/number","text":"Next"}]
+[
+	{
+		"userId": "user_1583331750259",
+		"time": 1583332169565,
+		"date": "4-2-2020",
+		"hours": "19:59",
+		"event": "click",
+		"controlType": "submit",
+		"position": {
+			"x": 68,
+			"y": 114,
+			"width": 377.5,
+			"height": 30,
+			"top": 114,
+			"right": 445.5,
+			"bottom": 144,
+			"left": 68
+		},
+		"page": "/number",
+		"text": 8758591240
+	},
+	{
+		"userId": "user_1583332167138",
+		"time": 1583332170349,
+		"date": "4-2-2020",
+		"hours": "19:59",
+		"event": "click",
+		"controlType": "submit",
+		"position": {
+			"x": 68,
+			"y": 152,
+			"width": 377.5,
+			"height": 30,
+			"top": 152,
+			"right": 445.5,
+			"bottom": 182,
+			"left": 68
+		},
+		"page": "/number",
+		"text": 8758591242
+	},
+	{
+		"userId": "user_1583332167138",
+		"time": 1583332170965,
+		"date": "4-2-2020",
+		"hours": "19:59",
+		"event": "click",
+		"controlType": "submit",
+		"position": {
+			"x": 68,
+			"y": 190,
+			"width": 377.5,
+			"height": 30,
+			"top": 190,
+			"right": 445.5,
+			"bottom": 220,
+			"left": 68
+		},
+		"page": "/number",
+		"text": 8758591244
+	},
+	{
+		"userId": "user_1583332167138",
+		"time": 1583332173077,
+		"date": "4-2-2020",
+		"hours": "19:59",
+		"event": "click",
+		"controlType": "submit",
+		"position": {
+			"x": 68,
+			"y": 228,
+			"width": 377.5,
+			"height": 30,
+			"top": 228,
+			"right": 445.5,
+			"bottom": 258,
+			"left": 68
+		},
+		"page": "/number",
+		"text": 8758591246
+	},
+	{
+		"userId": "user_1583332167138",
+		"time": 1583332174181,
+		"date": "4-2-2020",
+		"hours": "19:59",
+		"event": "click",
+		"controlType": "submit",
+		"position": {
+			"x": 68,
+			"y": 266,
+			"width": 377.5,
+			"height": 30,
+			"top": 266,
+			"right": 445.5,
+			"bottom": 296,
+			"left": 68
+		},
+		"page": "/number",
+		"text": 8758591248
+	},
+	{
+		"userId": "user_1583332167138",
+		"time": 1583332176925,
+		"date": "4-2-2020",
+		"hours": "19:59",
+		"event": "click",
+		"controlType": "submit",
+		"position": {
+			"x": 24,
+			"y": 407,
+			"width": 59.109375,
+			"height": 38,
+			"top": 407,
+			"right": 83.109375,
+			"bottom": 445,
+			"left": 24
+		},
+		"page": "/number",
+		"text": "Next"
+	}
+]

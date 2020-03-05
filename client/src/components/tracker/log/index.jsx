@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LogItem from './logitem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import * as classes from './Log.module.css';
@@ -11,7 +12,9 @@ export default class Log extends Component {
 		const { event } = this.props;
 		return (
 			<li
-				className={`list-item card ${this.state.collapsed ? classes.collapsed : ''}`}
+				className={`list-item card ${
+					this.state.collapsed ? classes.collapsed : ''
+				}`}
 				key={event.time}
 			>
 				<div
@@ -27,41 +30,20 @@ export default class Log extends Component {
 					)}
 				</div>
 				<div className={`${classes.itemWrapper} card-body p-2`}>
-					<p className='d-inline'>
-						<span>Control Type -> </span>
-						<span className='badge badge-secondary'>{`${event.controlType}`}</span>
-					</p>
-					<p className='d-inline'>
-						<span>Event -> </span>
-						<span className='badge badge-secondary'>{`${event.event}`}</span>
-					</p>
+					<LogItem label={`Control Type -> `} value={event.controlType} />
+					<LogItem label={`Event -> `} value={event.event} />
 					{event.text ? (
-						<p className='d-inline'>
-							<span>Text -> </span>
-							<span className='badge badge-secondary'>{`${event.text}`}</span>
-						</p>
+						<LogItem label={`Text -> `} value={event.text} />
 					) : null}
-					<p className='d-inline'>
-						<span>hours -> </span>
-						<span className='badge badge-secondary'>{`${event.hours}`}</span>
-					</p>
-					<p className='d-inline'>
-						<span>Date -> </span>
-						<span className='badge badge-secondary'>{`${event.date}`}</span>
-					</p>
-					<p className='d-inline'>
-						<span>Page -> </span>
-						<span className='badge badge-secondary'>{`${event.page}`}</span>
-					</p>
-					<p className='d-inline'>
-						<span>Position -> </span>
-						<span className='badge badge-secondary'>{`x:${event.position.x} , y: ${event.position.y}`}</span>
-					</p>
+					<LogItem label={`hours -> `} value={event.hours} />
+					<LogItem label={`Date -> `} value={event.date} />
+					<LogItem label={`Page -> `} value={event.page} />
+					<LogItem
+						label={`Position -> `}
+						value={`x:${event.position.x} , y: ${event.position.y}`}
+					/>
 					{event.value ? (
-						<p className='d-inline'>
-							<span>value -> </span>
-							<span className='badge badge-secondary'>{`${event.value}`}</span>
-						</p>
+						<LogItem label={`Value -> `} value={event.value} />
 					) : null}
 				</div>
 			</li>

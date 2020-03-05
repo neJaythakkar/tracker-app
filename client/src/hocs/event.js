@@ -15,6 +15,8 @@ export default class Event {
 		switch (target.type) {
 			case 'checkbox':
 				return target.checked ? 'checked' : 'unchecked';
+			case 'text':
+				return target.value;
 		}
 	}
 }

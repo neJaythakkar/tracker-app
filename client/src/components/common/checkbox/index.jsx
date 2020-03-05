@@ -1,5 +1,6 @@
 import React from 'react';
 import WithClick from '../../../hocs/withclick';
+import WithConnect from '../../../hocs/withconnect';
 import './CheckBox.css';
 
 const CheckBox = props => {
@@ -14,4 +15,4 @@ const CheckBox = props => {
 	);
 };
 
-export default WithClick(CheckBox);
+export default WithConnect(WithClick(CheckBox));

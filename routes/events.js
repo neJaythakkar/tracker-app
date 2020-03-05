@@ -19,9 +19,9 @@ router.post('/', async (request, response, next) => {
 	if (!fs.existsSync(fileName)) fs.writeFileSync(fileName,JSON.stringify(userEvents));
 	else {
 		const events = fs.readFileSync(fileName,'utf8')
-		const parsedEvents = JSON.parse(events);
-		parsedEvents.concat(userEvents);
-		fs.writeFileSync(fileName,JSON.stringify(userEvents));
+		let parsedEvents = JSON.parse(events);
+		parsedEvents = parsedEvents.concat(userEvents);
+		fs.writeFileSync(fileName,JSON.stringify(parsedEvents));
 	};
 
 	response.status(200).send("events posted successfully");

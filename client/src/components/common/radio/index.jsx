@@ -1,5 +1,6 @@
 import React from 'react';
 import WithClick from '../../../hocs/withclick';
+import WithConnect from '../../../hocs/withconnect';
 import * as classes from './Radio.module.css';
 
 const Radio = props => {
@@ -14,4 +15,4 @@ const Radio = props => {
 	);
 };
 
-export default WithClick(Radio);
+export default WithConnect(WithClick(Radio));

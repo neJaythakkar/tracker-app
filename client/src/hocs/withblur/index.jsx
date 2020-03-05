@@ -2,12 +2,13 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import CustomEvent from '../event';
 
-const WithClick = WrappedComponent =>
+export default WrappedComponent =>
 	withRouter(props => {
 		const { addEvents, match, handler, userId, text, ...rest } = props;
 
-		const clickHandler = event => {
+		const blurHandler = event => {
 			const time = new Date();
+			console.log(event);
 			const { target } = event;
 			const customEvent = new CustomEvent({
 				time,
@@ -16,13 +17,8 @@ const WithClick = WrappedComponent =>
 				userId,
 				event
 			});
-			if (text) customEvent.text = text;
 			addEvents(customEvent);
 			handler && handler();
 		};
-		return (
-			<WrappedComponent text={text} {...rest} clickHandler={clickHandler} />
-		);
+		return <WrappedComponent {...rest} blurHandler={blurHandler} />;
 	});
-
-export default WithClick;

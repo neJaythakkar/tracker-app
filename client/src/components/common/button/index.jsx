@@ -1,5 +1,6 @@
 import React from 'react';
 import WithClick from '../../../hocs/withclick';
+import WithConnect from '../../../hocs/withconnect';
 
 const Button = props => {
 	const { clickHandler, text, ...rest } = props;
@@ -11,4 +12,4 @@ const Button = props => {
 	);
 };
 
-export default WithClick(Button);
+export default WithConnect(WithClick(Button));

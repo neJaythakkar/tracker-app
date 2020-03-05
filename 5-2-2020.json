@@ -1,0 +1,376 @@
+[
+	{
+		"userId": "user_1583415325181",
+		"time": 1583415332514,
+		"date": "5-2-2020",
+		"hours": "19:5",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 301.859375,
+			"y": 104,
+			"width": 558.375,
+			"height": 0,
+			"top": 104,
+			"right": 860.234375,
+			"bottom": 104,
+			"left": 301.859375
+		},
+		"page": "/number",
+		"value": "checked",
+		"text": "Turmeric"
+	},
+	{
+		"userId": "user_1583415325181",
+		"time": 1583415333121,
+		"date": "5-2-2020",
+		"hours": "19:5",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 329.09375,
+			"y": 157,
+			"width": 558.375,
+			"height": 0,
+			"top": 157,
+			"right": 887.46875,
+			"bottom": 157,
+			"left": 329.09375
+		},
+		"page": "/number",
+		"value": "checked",
+		"text": "Chilli Flakes"
+	},
+	{
+		"userId": "user_1583415325181",
+		"time": 1583415333672,
+		"date": "5-2-2020",
+		"hours": "19:5",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 252.3125,
+			"y": 210,
+			"width": 558.375,
+			"height": 0,
+			"top": 210,
+			"right": 810.6875,
+			"bottom": 210,
+			"left": 252.3125
+		},
+		"page": "/number",
+		"value": "checked",
+		"text": "Salt"
+	},
+	{
+		"userId": "user_1583415325181",
+		"time": 1583415334264,
+		"date": "5-2-2020",
+		"hours": "19:5",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 334.140625,
+			"y": 263,
+			"width": 558.375,
+			"height": 0,
+			"top": 263,
+			"right": 892.515625,
+			"bottom": 263,
+			"left": 334.140625
+		},
+		"page": "/number",
+		"value": "checked",
+		"text": "Curry Power"
+	},
+	{
+		"userId": "user_1583415325181",
+		"time": 1583415336752,
+		"date": "5-2-2020",
+		"hours": "19:5",
+		"event": "click",
+		"controlType": "radio",
+		"position": {
+			"x": 269.34375,
+			"y": 358,
+			"width": 531.359375,
+			"height": 0,
+			"top": 358,
+			"right": 800.703125,
+			"bottom": 358,
+			"left": 269.34375
+		},
+		"page": "/number",
+		"text": "Coconut Oil"
+	},
+	{
+		"userId": "user_1583415325181",
+		"time": 1583415339690,
+		"date": "5-2-2020",
+		"hours": "19:5",
+		"event": "click",
+		"controlType": "submit",
+		"position": {
+			"x": 24,
+			"y": 407,
+			"width": 59.109375,
+			"height": 38,
+			"top": 407,
+			"right": 83.109375,
+			"bottom": 445,
+			"left": 24
+		},
+		"page": "/number",
+		"text": "Next"
+	},
+	{
+		"userId": "user_1583415533458",
+		"time": 1583415538629,
+		"date": "5-2-2020",
+		"hours": "19:8",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 301.859375,
+			"y": 104,
+			"width": 558.375,
+			"height": 0,
+			"top": 104,
+			"right": 860.234375,
+			"bottom": 104,
+			"left": 301.859375
+		},
+		"page": "/number",
+		"value": "checked",
+		"text": "Turmeric"
+	},
+	{
+		"userId": "user_1583415533458",
+		"time": 1583415539961,
+		"date": "5-2-2020",
+		"hours": "19:8",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 252.3125,
+			"y": 210,
+			"width": 558.375,
+			"height": 0,
+			"top": 210,
+			"right": 810.6875,
+			"bottom": 210,
+			"left": 252.3125
+		},
+		"page": "/number",
+		"value": "checked",
+		"text": "Salt"
+	},
+	{
+		"userId": "user_1583415533458",
+		"time": 1583415540471,
+		"date": "5-2-2020",
+		"hours": "19:9",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 329.09375,
+			"y": 157,
+			"width": 558.375,
+			"height": 0,
+			"top": 157,
+			"right": 887.46875,
+			"bottom": 157,
+			"left": 329.09375
+		},
+		"page": "/number",
+		"value": "checked",
+		"text": "Chilli Flakes"
+	},
+	{
+		"userId": "user_1583415533458",
+		"time": 1583415541159,
+		"date": "5-2-2020",
+		"hours": "19:9",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 334.140625,
+			"y": 263,
+			"width": 558.375,
+			"height": 0,
+			"top": 263,
+			"right": 892.515625,
+			"bottom": 263,
+			"left": 334.140625
+		},
+		"page": "/number",
+		"value": "checked",
+		"text": "Curry Power"
+	},
+	{
+		"userId": "user_1583415533458",
+		"time": 1583415542931,
+		"date": "5-2-2020",
+		"hours": "19:9",
+		"event": "click",
+		"controlType": "submit",
+		"position": {
+			"x": 24,
+			"y": 407,
+			"width": 59.109375,
+			"height": 38,
+			"top": 407,
+			"right": 83.109375,
+			"bottom": 445,
+			"left": 24
+		},
+		"page": "/number",
+		"text": "Next"
+	},
+	{
+		"userId": "user_1583415548446",
+		"time": 1583415553575,
+		"date": "5-2-2020",
+		"hours": "19:9",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 196.609375,
+			"y": 84,
+			"width": 201.15625,
+			"height": 0,
+			"top": 84,
+			"right": 397.765625,
+			"bottom": 84,
+			"left": 196.609375
+		},
+		"page": "/billing",
+		"value": "checked",
+		"text": "Tomatoes"
+	},
+	{
+		"userId": "user_1583415548446",
+		"time": 1583415555007,
+		"date": "5-2-2020",
+		"hours": "19:9",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 396.390625,
+			"y": 84,
+			"width": 201.15625,
+			"height": 0,
+			"top": 84,
+			"right": 597.546875,
+			"bottom": 84,
+			"left": 396.390625
+		},
+		"page": "/billing",
+		"value": "checked",
+		"text": "Potatoes"
+	},
+	{
+		"userId": "user_1583415548446",
+		"time": 1583415555695,
+		"date": "5-2-2020",
+		"hours": "19:9",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 357.15625,
+			"y": 137,
+			"width": 201.15625,
+			"height": 0,
+			"top": 137,
+			"right": 558.3125,
+			"bottom": 137,
+			"left": 357.15625
+		},
+		"page": "/billing",
+		"value": "checked",
+		"text": "Mint"
+	},
+	{
+		"userId": "user_1583415548446",
+		"time": 1583415557135,
+		"date": "5-2-2020",
+		"hours": "19:9",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 816.8125,
+			"y": 137,
+			"width": 201.15625,
+			"height": 0,
+			"top": 137,
+			"right": 1017.96875,
+			"bottom": 137,
+			"left": 816.8125
+		},
+		"page": "/billing",
+		"value": "checked",
+		"text": "Cabbage"
+	},
+	{
+		"userId": "user_1583415548446",
+		"time": 1583415558287,
+		"date": "5-2-2020",
+		"hours": "19:9",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 409.484375,
+			"y": 190,
+			"width": 201.15625,
+			"height": 0,
+			"top": 190,
+			"right": 610.640625,
+			"bottom": 190,
+			"left": 409.484375
+		},
+		"page": "/billing",
+		"value": "checked",
+		"text": "Coliflower"
+	},
+	{
+		"userId": "user_1583415548446",
+		"time": 1583415560615,
+		"date": "5-2-2020",
+		"hours": "19:9",
+		"event": "click",
+		"controlType": "checkbox",
+		"position": {
+			"x": 1034.875,
+			"y": 243,
+			"width": 201.15625,
+			"height": 0,
+			"top": 243,
+			"right": 1236.03125,
+			"bottom": 243,
+			"left": 1034.875
+		},
+		"page": "/billing",
+		"value": "checked",
+		"text": "Coriander"
+	},
+	{
+		"userId": "user_1583415548446",
+		"time": 1583415566079,
+		"date": "5-2-2020",
+		"hours": "19:9",
+		"event": "click",
+		"controlType": "submit",
+		"position": {
+			"x": 24,
+			"y": 407,
+			"width": 59.109375,
+			"height": 38,
+			"top": 407,
+			"right": 83.109375,
+			"bottom": 445,
+			"left": 24
+		},
+		"page": "/billing",
+		"text": "Next"
+	}
+]

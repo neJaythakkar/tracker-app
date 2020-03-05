@@ -11,7 +11,7 @@ function App(props) {
 		<div className='App h-100'>
 			<header className='App-header'></header>
 			<div className='body-container container-fluid row h-100 m-0 p-0'>
-				<div class={`page-container h-75 overflow-auto ${props.isConsoleCollapsed? 'open-full' : ''}`}>
+				<div class={`page-container w-100 h-75 overflow-auto position-relative ${props.isConsoleCollapsed? 'open-full' : ''}`}>
 					<Routes />
 				</div>
 				<Tracker />
