@@ -7,6 +7,7 @@ import * as trackerActions from '../../store/tracker/actions';
 import * as trackerSelectors from '../../store/tracker/selectors';
 import Spinner from '../../components/common/spinner';
 import Button from '../../components/common/button';
+import { Button as LibButton } from 'jay-dummy-component-library';
 import Input from '../../components/common/input';
 import Checkbox from '../../components/common/checkbox';
 import Radio from '../../components/common/radio';
@@ -18,18 +19,18 @@ class ChooseNumber extends Component {
 		getUser();
 	}
 	postEvents = async () => {
-		const { postEvents, resetEvents, history } = this.props;
-		const { status } = await postEvents();
-		if (status === 200) {
-			resetEvents({});
-			history.push('/billing');
-		}
+		const { history } = this.props;
+		history.push('/billing');
 	};
 	render() {
-		return this.props.userId ? ( 
+		return this.props.userId ? (
 			<div className='p-4'>
 				<div className='row'>
-					<Button className='col-auto mr-auto' text='click here' />
+					<LibButton
+						className='col-auto mr-auto'
+						text='click here'
+						userId={this.props.userId}
+					/>
 					<Input className='col-auto' />
 				</div>
 				<div className='row'>
@@ -57,16 +58,18 @@ class ChooseNumber extends Component {
 					<ul className='list row'>
 						{oilTypes.map(item => (
 							<li className='col-6 p-1'>
-								<Radio className='w-100' name="oil" text={item} />
+								<Radio className='w-100' name='oil' text={item} />
 							</li>
 						))}
 					</ul>
 				</div>
 				<div className='row'>
-					<Button
+					<LibButton
 						text='Next'
 						handler={this.postEvents}
 						className='btn btn-primary'
+						userId={this.props.userId}
+						pushEvents
 					/>
 				</div>
 			</div>

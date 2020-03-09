@@ -13,10 +13,6 @@ import Radio from '../../components/common/radio';
 import { spices, oilTypes, Vegetables } from '../../mock/index';
 
 class Billing extends Component {
-	componentDidMount() {
-		const { getUser } = this.props;
-		getUser();
-	}
 	postEvents = async () => {
 		const { postEvents, resetEvents, history } = this.props;
 		const { status } = await postEvents();
@@ -25,41 +21,37 @@ class Billing extends Component {
 			history.push('/billing');
 		}
 	};
-	render() {
-		return this.props.userId ? (
-			<div className='p-4'>
-				<div className='row'>
-					<h1 className='text-center'>Vegetables</h1>
-					<ul className='list row'>
-						{Vegetables.map(item => (
-							<li className='col-2 p-1'>
-								<Checkbox className='w-100' text={item} />
-							</li>
-						))}
-					</ul>
-				</div>
-				<div className='row'>
-					<h1 className='text-center'>Oil</h1>
-					<ul className='list row'>
-						{oilTypes.map(item => (
-							<li className='col-6 p-1'>
-								<Radio className='w-100' name='oil' text={item} />
-							</li>
-						))}
-					</ul>
-				</div>
-				<div className='row'>
-					<Button
-						text='Next'
-						handler={this.postEvents}
-						className='btn btn-primary'
-					/>
-				</div>
+	render = () => (
+		<div className='p-4'>
+			<div className='row'>
+				<h1 className='text-center'>Vegetables</h1>
+				<ul className='list row'>
+					{Vegetables.map(item => (
+						<li className='col-2 p-1'>
+							<Checkbox className='w-100' text={item} />
+						</li>
+					))}
+				</ul>
 			</div>
-		) : (
-			<Spinner />
-		);
-	}
+			<div className='row'>
+				<h1 className='text-center'>Oil</h1>
+				<ul className='list row'>
+					{oilTypes.map(item => (
+						<li className='col-6 p-1'>
+							<Radio className='w-100' name='oil' text={item} />
+						</li>
+					))}
+				</ul>
+			</div>
+			<div className='row'>
+				<Button
+					text='Next'
+					handler={this.postEvents}
+					className='btn btn-primary'
+				/>
+			</div>
+		</div>
+	);
 }
 export default withRouter(
 	connect(
