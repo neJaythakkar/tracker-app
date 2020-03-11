@@ -14,10 +14,12 @@ import Radio from '../../components/common/radio';
 import { numbersList, spices, oilTypes } from '../../mock/index';
 
 class ChooseNumber extends Component {
+
 	componentDidMount() {
-		const { getUser } = this.props;
+		const { getUser, history } = this.props;
 		getUser();
 	}
+
 	postEvents = async () => {
 		const { history } = this.props;
 		history.push('/billing');
