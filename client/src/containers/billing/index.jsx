@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import ModalWithTracker from '../../components/common/modal';
 import * as userSelectors from '../../store/user/selector';
-import * as trackerActions from '../../store/tracker/actions';
-import * as trackerSelectors from '../../store/tracker/selectors';
-import Checkbox from '../../components/common/checkbox';
-import { Button as LibButton } from 'jay-dummy-component-library';
-import { Vegetables } from '../../mock/index';
+import {
+	Button as LibButton,
+	Checkbox,
+	Select,
+	Modal
+} from 'jay-dummy-component-library';
+import { Vegetables, make, makeModal } from '../../mock/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import './Billing.css';
@@ -37,12 +38,8 @@ class Billing extends Component {
 		this.setIsOpen(true);
 	};
 	postEvents = async () => {
-		const { postEvents, resetEvents, history, userId } = this.props;
-		const { status } = await postEvents();
-		if (status === 200) {
-			resetEvents({});
-			history.push('/billing');
-		}
+		const { history } = this.props;
+		history.push('/success');
 	};
 	render = () => (
 		<div className='p-4'>
@@ -56,14 +53,44 @@ class Billing extends Component {
 					))}
 				</ul>
 			</div>
-			{console.log(this.props.userId)}
+			<div className='d-flex flex-column my-5 single-select-dropdown-container'>
+				<h1 className='text-center mb-5'>single select dropDown</h1>
+				<div className='row'>
+					<label className='d-flex justify-content-center align-items-center p-0 col-3'>
+						Select the Brand
+					</label>
+					<Select
+						options={make}
+						handler={() => {}}
+						displayField='label'
+						valueField='value'
+						parentClasses='col-9'
+					/>
+				</div>
+			</div>
+			<div className='d-flex flex-column my-5 single-select-dropdown-container'>
+				<h1 className='text-center mb-5'>Multi Select dropDown</h1>
+				<div className='row'>
+					<label className='d-flex justify-content-center align-items-center p-0 col-3'>
+						Select the Brand
+					</label>
+					<Select
+						options={makeModal}
+						handler={() => {}}
+						displayField='label'
+						valueField='value'
+						parentClasses='col-9'
+						multi={true}
+					/>
+				</div>
+			</div>
 			<div className='row'>
 				<LibButton
 					text='Open Modal'
 					className='btn btn-primary'
 					handler={this.clickHandler}
 				/>
-				<ModalWithTracker
+				<Modal
 					isOpen={this.state.modalIsOpen}
 					className='modal'
 					overlayClassName='overlay'
@@ -77,28 +104,37 @@ class Billing extends Component {
 						</button>
 						{/* <LibButton text="close" handler={this.closeModal}></LibButton> */}
 					</div>
-					<div>I am a modal</div>
-					<form>
-						<input />
-						<button>tab navigation</button>
-						<button>stays</button>
-						<button>inside</button>
-						<button>the modal</button>
+
+					<form class='form-inline'>
+						<div className='form-group w-100'>
+							<label className='col-3 text-left'>Make</label>
+							<Select
+								options={make}
+								handler={() => {}}
+								displayField='label'
+								valueField='value'
+								parentClasses='col-9'
+							/>
+						</div>
 					</form>
-				</ModalWithTracker>
+				</Modal>
+			</div>
+			<div className='d-flex flex-column my-5 single-select-dropdown-container'>
+				<div className='row'>
+					<LibButton
+						text='Next'
+						handler={this.postEvents}
+						className='btn btn-primary'
+						userId={this.props.userId}
+						pushEvents
+					/>
+				</div>
 			</div>
 		</div>
 	);
 }
 export default withRouter(
-	connect(
-		state => ({
-			userId: userSelectors.getUserId(state),
-			events: trackerSelectors.getEvents(state)
-		}),
-		{
-			postEvents: trackerActions.postEvents,
-			resetEvents: trackerActions.resetEvents
-		}
-	)(Billing)
+	connect(state => ({
+		userId: userSelectors.getUserId(state),
+	}))(Billing)
 );

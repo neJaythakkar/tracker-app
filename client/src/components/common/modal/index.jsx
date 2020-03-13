@@ -3,7 +3,6 @@ import Modal from 'react-modal';
 import { withRouter } from 'react-router';
 import WithConnect from '../../../hocs/withconnect';
 import CustomEvents from '../../../hocs/event';
-import { Button as LibButton } from 'jay-dummy-component-library';
 
 class ModalWithTracker extends React.Component {
 	modalRef = null;

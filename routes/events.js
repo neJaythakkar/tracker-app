@@ -1,7 +1,6 @@
 const express = require('express'),
 	router = express.Router(),
-	fs = require('fs');
-pathUtil = require('../util/path');
+	addUserEvents = require('../util').addUserEvents;
 
 router.get('/', async (request, response, next) => {
 	const data = await fetch('https://jsonplaceholder.typicode.com/todos');
@@ -10,20 +9,8 @@ router.get('/', async (request, response, next) => {
 });
 
 router.post('/', async (request, response, next) => {
-	const body = request.body;
-	const time = new Date();
-	const d = `${time.getDate()}-${time.getMonth()}-${time.getFullYear()}`;
-	const userEvents = Object.values(body);
-	const fileName = `${pathUtil.getRootDirectory()}\\${d}.json`;
-
-	if (!fs.existsSync(fileName)) fs.writeFileSync(fileName,JSON.stringify(userEvents));
-	else {
-		const events = fs.readFileSync(fileName,'utf8')
-		let parsedEvents = JSON.parse(events);
-		parsedEvents = parsedEvents.concat(userEvents);
-		fs.writeFileSync(fileName,JSON.stringify(parsedEvents));
-	};
-
-	response.status(200).send("events posted successfully");
+	const { userId, events } = request.body;
+	addUserEvents({ userId, newEvents: events });
+	response.status(200).send('events posted successfully');
 });
 module.exports = router;

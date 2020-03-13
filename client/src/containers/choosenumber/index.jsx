@@ -3,20 +3,13 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import * as userActions from '../../store/user/actions';
 import * as userSelectors from '../../store/user/selector';
-import * as trackerActions from '../../store/tracker/actions';
-import * as trackerSelectors from '../../store/tracker/selectors';
 import Spinner from '../../components/common/spinner';
-import Button from '../../components/common/button';
-import { Button as LibButton } from 'jay-dummy-component-library';
-import Input from '../../components/common/input';
-import Checkbox from '../../components/common/checkbox';
-import Radio from '../../components/common/radio';
+import { Button, Checkbox, Radio, Input } from 'jay-dummy-component-library';
 import { numbersList, spices, oilTypes } from '../../mock/index';
 
 class ChooseNumber extends Component {
-
 	componentDidMount() {
-		const { getUser, history } = this.props;
+		const { getUser } = this.props;
 		getUser();
 	}
 
@@ -28,7 +21,7 @@ class ChooseNumber extends Component {
 		return this.props.userId ? (
 			<div className='p-4'>
 				<div className='row'>
-					<LibButton
+					<Button
 						className='col-auto mr-auto'
 						text='click here'
 						userId={this.props.userId}
@@ -66,7 +59,7 @@ class ChooseNumber extends Component {
 					</ul>
 				</div>
 				<div className='row'>
-					<LibButton
+					<Button
 						text='Next'
 						handler={this.postEvents}
 						className='btn btn-primary'
@@ -83,13 +76,10 @@ class ChooseNumber extends Component {
 export default withRouter(
 	connect(
 		state => ({
-			userId: userSelectors.getUserId(state),
-			events: trackerSelectors.getEvents(state)
+			userId: userSelectors.getUserId(state)
 		}),
 		{
-			getUser: userActions.fetchUser,
-			postEvents: trackerActions.postEvents,
-			resetEvents: trackerActions.resetEvents
+			getUser: userActions.fetchUser
 		}
 	)(ChooseNumber)
 );

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Log from '../../components/tracker/log';
 import * as uiActions from '../../store/ui/actions';
-import * as TrackerSelectors from '../../store/tracker/selectors';
+import * as TrackerSelectors from 'jay-dummy-component-library/dist/store/tracker/selectors';
 import * as uiSelectors from '../../store/ui/selectors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
